@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MyBookshelf 1.0</string>
+    <string name="MyBookshelf">MyBookshelf</string>
+    <string name="email" />
+    <string name="senha" />
+    <string name="entrar" />
+    <string name="cadastrar" />
+    <string name="login">LOGIN</string>
+    <string name="editTextEmail">Email</string>
+    <string name="editTextSenha">Senha</string>
+    <string name="editTextCadastro">CADASTRO</string>
+    <string name="cadastro" />
+    <string name="TextViewSenha">Senha</string>
+    <string name="TextViewEmail">Email</string>
+    <string name="TextViewTitle">Login</string>
+    <string name="TextViewMybookshelf">MyBookshelf</string>
+    <string name="bCadastro">CADASTRO</string>
+    <string name="bEmail">LOGIN</string>
+    <string name="buttonEntrar">ENTRAR</string>
+    <string name="digite_sua_senha">Digite sua senha</string>
+    <string name="digite_seu_e_mail">Digite seu e-mail</string>
+</resources>
