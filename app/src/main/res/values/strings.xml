@@ -19,4 +19,6 @@
     <string name="buttonEntrar">ENTRAR</string>
     <string name="digite_sua_senha">Digite sua senha</string>
     <string name="digite_seu_e_mail">Digite seu e-mail</string>
+    <string name="image_from_camera" />
+    <string name="take_picture" />
 </resources>

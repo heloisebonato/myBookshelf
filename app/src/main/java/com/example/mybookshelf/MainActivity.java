@@ -37,11 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
                 for (int i = 0; i < UsuarioSingleton.getInstance().usuarioList.size(); i++) {
                     if (UsuarioSingleton.getInstance().usuarioList.get(i).getPlainTextEmail().equalsIgnoreCase(email) && UsuarioSingleton.getInstance().usuarioList.get(i).getPlainTextSenha().equals(senha)) {
-                        Intent it = new Intent(v.getContext(), cadastro.class);
+                        Intent it = new Intent(v.getContext(), camera.class);
                         MainActivity.this.startActivity(it);
-                        alerta("FUNCIONA");
                     } else {
-                        alerta("NUM FUNCIONA");
+                        alerta("E-mail/Senha incorretos");
                     }
                 }
             }
