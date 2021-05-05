@@ -21,4 +21,6 @@
     <string name="digite_seu_e_mail">Digite seu e-mail</string>
     <string name="image_from_camera" />
     <string name="take_picture" />
+    <string name="btnAdicionar">Adicionar Livro</string>
+    <string name="button_to_add_new_book">Button to add new book</string>
 </resources>
