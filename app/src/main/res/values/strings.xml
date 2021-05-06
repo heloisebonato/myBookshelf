@@ -23,4 +23,9 @@
     <string name="take_picture" />
     <string name="btnAdicionar">Adicionar Livro</string>
     <string name="button_to_add_new_book">Button to add new book</string>
+    <string name="button">Button</string>
+    <string name="bGaleria" />
+    <string name="galeria">GALERIA</string>
+    <string name="tirar_foto">TIRAR FOTO</string>
+    <string name="buttonGaleria" />
 </resources>

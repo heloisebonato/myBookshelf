@@ -15,7 +15,9 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -24,6 +26,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class camera extends AppCompatActivity {
+
 
     static final int CAMERA_PERMISSION_CODE = 2001;
     static final int CAMERA_INTENT_CODE = 3001;
@@ -37,14 +40,22 @@ public class camera extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camera);
         imageViewCamera = findViewById(R.id.imageViewCamera);
+        Button buttonGaleria = (Button) findViewById(R.id.buttonGaleria);
+        buttonGaleria.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent it = new Intent(v.getContext(), MainActivity.class);
+                startActivity(it);
+            }
+        });
     }
-    public void buttonCameraClicked(View view){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+    public void buttonCameraClicked(View view) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestCameraPermission();
-        }else{
+        } else {
             sendCameraIntent();
         }
     }
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     void requestCameraPermission(){
         if(getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_ANY)){
@@ -103,18 +114,19 @@ public class camera extends AppCompatActivity {
 
         }
     }
+
     @Override
     protected void onActivityResult(int requestCode,
                                     int resultCode,
                                     @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == CAMERA_INTENT_CODE){
-            if(resultCode == RESULT_OK){
+        if (requestCode == CAMERA_INTENT_CODE) {
+            if (resultCode == RESULT_OK) {
                 File file = new File(picturePath);
-                if(file.exists()){
+                if (file.exists()) {
                     imageViewCamera.setImageURI(Uri.fromFile(file));
                 }
-            }else{
+            } else {
                 Toast.makeText(camera.this,
                         "Problem getting the image from the camera app",
                         Toast.LENGTH_LONG).show();

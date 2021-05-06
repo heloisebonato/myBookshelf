@@ -17,7 +17,6 @@ package com.example.mybookshelf;
         import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-
     private Context conteudo;
     private List<Books> data;
 
@@ -50,8 +49,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 intent.putExtra("Thumbnail",data.get(position).getThumbnail());
                 //iniciando
                 conteudo.startActivity(intent);
-
-
             }
         });
 

@@ -1,33 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
-    android:clickable="true"
-    android:foreground="?android:attr/selectableItemBackground"
     android:layout_width="120dp"
     android:layout_height="190dp"
-    android:layout_margin="5dp"
-    cardview:cardCornerRadius="4dp">
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    cardview:cardCornerRadius="4dp"
+    tools:layout_editor_absoluteX="5dp"
+    tools:layout_editor_absoluteY="5dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <ImageView
             android:id="@+id/id_image_book"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="#2d2d2d"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            cardview:layout_constraintBottom_toTopOf="@+id/id_title_book"
+            cardview:layout_constraintEnd_toEndOf="parent"
+            cardview:layout_constraintHorizontal_bias="1.0"
+            cardview:layout_constraintStart_toStartOf="parent"
+            cardview:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/id_title_book"
-            android:textColor="#000"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="58dp"
+            android:layout_height="17dp"
             android:gravity="center"
             android:text="Book Title"
-            android:textSize="13sp" />
-    </LinearLayout>
+            android:textColor="#000"
+            android:textSize="13sp"
+            cardview:layout_constraintBottom_toBottomOf="parent"
+            cardview:layout_constraintEnd_toEndOf="parent"
+            cardview:layout_constraintStart_toStartOf="parent"
+            cardview:layout_constraintTop_toBottomOf="@+id/id_image_book" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
