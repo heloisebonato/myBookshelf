@@ -10,50 +10,30 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class TelaInicial extends RecyclerView.Adapter<TelaInicial.ViewHolder> {
+public class TelaInicial extends AppCompatActivity {
 
-    private Context conteudo;
-    private List<Books> data;
+        List<Books> listBooks;
 
-    public TelaInicial(Context conteudo, List<Books> data){
-        this.conteudo = conteudo;
-        this.data = data;
-    }
-    @Override
-    public TelaInicial.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view;
-        LayoutInflater inflater = LayoutInflater.from(conteudo);
-        view = inflater.inflate(R.layout.cardview_books, parent, false);
-        return new ViewHolder(view);
-    }
+        @Override
+    protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.tela_inicial);
 
-    @Override
-    public void onBindViewHolder(@NonNull TelaInicial.ViewHolder holder, int position) {
-        holder.book_title.setText(data.get(position).getTitulo());
-        holder.book_thumbnail.setImageResource(data.get(position).getThumbnail());
+            listBooks = new ArrayList<>();
+            listBooks.add(new Books("Quem é você alasca?", "Romance", "a história tem seus atrativos e uma narrativa que, mesmo com personagens nada carismáticos, envolve e suga completamente o leitor.", R.drawable.alasca));
+            listBooks.add(new Books("Harry Potter e o Cálice de Fogo", "Fantasia", " uma das leituras mais agradáveis da série. A ação constante prende facilmente o leitor; a assustadora volta de Voldemort, por fim, evidencia que tempos sombrios estão a caminho", R.drawable.harrypotter));
+            listBooks.add(new Books("O Nome do Vento", "Fantasia", "Ele foge do padrão e, na minha opinião, isso é excelente. Eu me identifiquei com ele!!!", R.drawable.nomedovento));
+            listBooks.add(new Books("SCRUM: a arte de fazer o dobro do trabalho na metade do tempo", "", "Leitura rápida e interessante, vale a pena também para abrir a mente para uma nova maneira de gerenciar projetos mais rápido e melhor", R.drawable.scrum));
 
-    }
-
-    @Override
-    public int getItemCount() {
-        return data.size();
-    }
-
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-
-        TextView book_title;
-        ImageView book_thumbnail;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-
-            book_title = (TextView) itemView.findViewById(R.id.id_title_book);
-            book_thumbnail = (ImageView) itemView.findViewById(R.id.id_image_book);
+            RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerView);
+            RecyclerViewAdapter myAdapter = new RecyclerViewAdapter(this, listBooks);
+            myrv.setLayoutManager(new GridLayoutManager(this, 3));
+            myrv.setAdapter(myAdapter);
         }
-    }
-
 }
