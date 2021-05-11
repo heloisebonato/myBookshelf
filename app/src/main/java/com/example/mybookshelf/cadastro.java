@@ -31,7 +31,7 @@ public class cadastro extends AppCompatActivity {
 
                 UsuarioSingleton.getInstance().usuarioList.add(usuario);
 
-                Intent it = new Intent(v.getContext(), TelaInicial.class);
+                Intent it = new Intent(v.getContext(), camera.class);
                 startActivity(it);
             }
         });

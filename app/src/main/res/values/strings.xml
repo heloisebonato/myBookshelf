@@ -38,4 +38,5 @@
     <string name="categoria_book">Categoria</string>
     <string name="opiniao_book">Opiniao</string>
     <string name="add_image">TODO</string>
+    <string name="button_ver_livros">Ver livros</string>
 </resources>
