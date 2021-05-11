@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
         android:layout_marginTop="36dp"
-        android:hint="Cadastro"
+        android:hint="@string/text_cadastro"
         android:text="@string/cadastrar"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="128dp"
-        android:text="Email"
+        android:text="@string/text_email"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="184dp"
-        android:text="Senha"
+        android:text="@string/text_senha"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -63,7 +63,8 @@
         android:inputType="textPersonName"
         android:text="@string/senha"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/bCadastrar"
@@ -71,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
         android:layout_marginTop="256dp"
-        android:hint="CADASTRAR"
+        android:hint="@string/button_cadastrar"
         android:text="@string/cadastrar"
         android:textColorHint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"

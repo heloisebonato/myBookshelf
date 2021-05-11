@@ -28,4 +28,14 @@
     <string name="galeria">GALERIA</string>
     <string name="tirar_foto">TIRAR FOTO</string>
     <string name="buttonGaleria" />
+    <string name="book_title">Book Title</string>
+    <string name="add_new_book">TODO</string>
+    <string name="text_cadastro">Cadastro</string>
+    <string name="text_email">Email</string>
+    <string name="text_senha">Senha</string>
+    <string name="button_cadastrar">CADASTRAR</string>
+    <string name="titulo_book">Titulo</string>
+    <string name="categoria_book">Categoria</string>
+    <string name="opiniao_book">Opiniao</string>
+    <string name="add_image">TODO</string>
 </resources>

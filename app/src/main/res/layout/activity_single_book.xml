@@ -22,20 +22,21 @@
                 android:layout_height="170dp"
                 android:background="#2d2d2d"
                 android:id="@+id/id_image_book"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/add_image" />
             <TextView
                 android:id="@+id/singlebook_titulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Titulo"
+                android:text="@string/titulo_book"
                 android:layout_marginTop="10dp"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/singlebook_categoria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Categoria"
+                android:text="@string/categoria_book"
                 android:background="#edecec"
                 android:padding="8dp"
                 android:layout_marginTop="10dp"/>
@@ -45,7 +46,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Opiniao"/>
+                android:text="@string/opiniao_book"/>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
